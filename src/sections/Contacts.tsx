@@ -1,5 +1,6 @@
 import Button from "../components/Button";
 import { useTranslation } from "react-i18next";
+import { RESUME_URL } from "../constants/links";
 
 export default function Contacts() {
   const { t } = useTranslation();
@@ -13,7 +14,7 @@ export default function Contacts() {
             {l.label}
           </Button>
         ))}
-        <Button href="/resume.pdf" target="_blank" rel="noopener" variant="primary">
+        <Button href={RESUME_URL} target="_blank" rel="noopener" variant="primary">
           {t("common.resume")}
         </Button>
       </div>

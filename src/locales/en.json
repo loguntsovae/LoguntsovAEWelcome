@@ -6,19 +6,12 @@
   },
   "hero": {
     "name": "Aleksei Loguntsov",
-    "title": "Senior Backend Engineer",
-    "subline": "Python · FastAPI · Architecture · AWS",
-    "tagline": "I build production-ready backend systems that scale.",
+    "title": "Senior Backend Engineer · Tech Lead",
+    "subline": "Python · Microservices · AI Automation · Architecture · AWS Solutions",
+    "tagline": "I build scalable backend systems and mentor engineering teams.",
     "timeLabel": "Time in IT"
   },
-  "about": {
-    "title": "About in 10 seconds",
-    "points": [
-      "5+ years building backend systems",
-      "Microservices for auth, orders, billing",
-      "Leading and mentoring developers"
-    ]
-  },
+  
   "skills": {
     "title": "Skills",
     "items": [
@@ -61,8 +54,10 @@
     "title": "Contacts",
     "links": [
       { "label": "LinkedIn", "href": "https://www.linkedin.com/in/loguntsovae" },
-      { "label": "GitHub", "href": "https://github.com/loguntsovae" },
-      { "label": "Email", "href": "mailto:hello@loguntsovae.digital" }
+      { "label": "GitHub", "href": "https://github.com/loguntsovae?tab=repositories" },
+      { "label": "Telegram", "href": "https://t.me/loguntsovae" },
+      { "label": "Email", "href": "mailto:loguntsovae@gmail.com" },
+      { "label": "Book a call", "href": "https://calendar.app.google/vFFVqQNf9LK7qqJx9" }
     ]
   },
   "footer": {

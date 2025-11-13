@@ -1,42 +1,44 @@
-import { motion } from "framer-motion";
 import Button from "../components/Button";
 import { useTranslation } from "react-i18next";
 import ItTimer from "../components/ItTimer";
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 10 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } }
-};
+import { RESUME_URL } from "../constants/links";
 
 export default function Hero() {
   const { t } = useTranslation();
 
   return (
-    <section id="hero" className="py-16 md:py-24">
-      <div className="grid items-center gap-10 md:grid-cols-2">
-        <div>
-          <motion.h1 variants={fadeUp} className="text-3xl font-semibold tracking-tight md:text-5xl">
-            {t("hero.name")}
-          </motion.h1>
-          <motion.p variants={fadeUp} className="mt-3 text-xl text-neutral-700 md:text-2xl">
-            {t("hero.title")}
-          </motion.p>
-          <motion.p variants={fadeUp} className="mt-2 text-neutral-600">
-            {t("hero.subline")}
-          </motion.p>
-          <motion.p variants={fadeUp} className="mt-4 text-neutral-800">
-            {t("hero.tagline")}
-          </motion.p>
-          <motion.div variants={fadeUp} className="mt-6 flex flex-wrap gap-3">
-            <Button href="/resume.pdf" target="_blank" rel="noopener noreferrer" variant="primary">
-              {t("common.resume")}
-            </Button>
-            <Button href="#projects" variant="secondary">{t("common.portfolio")}</Button>
-          </motion.div>
+    <section id="hero" className="pt-[80px] pb-[60px]">
+      <div className="mx-auto max-w-7xl px-4">
+        <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-2">
+          {/* Left column */}
+          <div>
+            <h1 className="mb-[6px] text-[48px] font-bold leading-[1.1] text-[#111]">
+              {t("hero.name")}
+            </h1>
+            <p className="mb-[8px] text-[24px] font-medium leading-[1.3] text-[#1f1f1f]">
+              {t("hero.title")}
+            </p>
+            <p className="mb-[14px] text-[15px] leading-[1.4] text-[#555]">
+              {t("hero.subline")}
+            </p>
+            <p className="mb-[20px] max-w-[460px] text-[15px] leading-[1.5] text-[#444]">
+              {t("hero.tagline")}
+            </p>
+            <div className="flex flex-wrap">
+              <Button href={RESUME_URL} target="_blank" rel="noopener noreferrer" variant="primary">
+                {t("common.resume")}
+              </Button>
+              <Button href="#projects" variant="secondary" className="ml-[12px]">
+                {t("common.portfolio")}
+              </Button>
+            </div>
+          </div>
+
+          {/* Right column */}
+          <div className="flex items-center justify-start md:justify-end">
+            <ItTimer startDate="2018-09-01" />
+          </div>
         </div>
-        <motion.div variants={fadeUp} className="flex items-center justify-center md:justify-end">
-          <ItTimer startDate="2018-09-01" />
-        </motion.div>
       </div>
     </section>
   );

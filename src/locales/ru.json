@@ -6,18 +6,10 @@
   },
   "hero": {
     "name": "Aleksei Loguntsov",
-    "title": "Senior Backend Engineer",
-    "subline": "Python · FastAPI · Архитектура · AWS",
-    "tagline": "Я строю продакшен-готовые бэкенд-системы, которые масштабируются.",
+    "title": "Senior Backend Engineer · Tech Lead",
+    "subline": "Python · FastAPI · Микросервисы · Архитектура · AWS",
+    "tagline": "Я строю масштабируемые бэкенд‑системы и менторю команды инженеров.",
     "timeLabel": "Time in IT"
-  },
-  "about": {
-    "title": "Обо мне за 10 секунд",
-    "points": [
-      "5+ лет разработки бэкенда",
-      "Микросервисы для auth, orders, billing",
-      "Руковожу и менторю разработчиков"
-    ]
   },
   "skills": {
     "title": "Навыки",
@@ -61,8 +53,10 @@
     "title": "Контакты",
     "links": [
       { "label": "LinkedIn", "href": "https://www.linkedin.com/in/loguntsovae" },
-      { "label": "GitHub", "href": "https://github.com/loguntsovae" },
-      { "label": "Email", "href": "mailto:hello@loguntsovae.digital" }
+      { "label": "GitHub", "href": "https://github.com/loguntsovae?tab=repositories" },
+      { "label": "Telegram", "href": "https://t.me/loguntsovae" },
+      { "label": "Email", "href": "mailto:hello@loguntsovae.digital" },
+      { "label": "Назначить звонок", "href": "https://calendar.app.google/vFFVqQNf9LK7qqJx9" }
     ]
   },
   "footer": {

@@ -74,7 +74,7 @@ No special base path needed (site root is "/").
 ## Customization
 
 - Replace `src/assets/profile-placeholder.svg` with your photo, and update import in `Hero` if needed.
-- Put your PDF resume at `public/resume.pdf` (the "Resume" button points there).
+- Resume link is configured in `src/constants/links.ts` (currently points to an external S3 URL). You can switch it to a local file by placing `public/resume.pdf` and updating the constant.
 - Update links in `Projects` and `Contacts` sections.
 - Edit copy in `src/locales/en.json` and `src/locales/ru.json`.
 
