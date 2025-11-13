@@ -6,21 +6,14 @@
   },
   "hero": {
     "name": "Aleksei Loguntsov",
-    "title": "Senior Backend Engineer",
-    "subline": "Python · FastAPI · Architecture · AWS",
-    "tagline": "I build production-ready backend systems that scale.",
+    "title": "Senior Backend Engineer · Tech Lead",
+    "subline": "Python · Microservices · AI Automation · Architecture · AWS Solutions",
+    "tagline": "I build scalable backend systems and mentor engineering teams.",
     "timeLabel": "Time in IT"
   },
-  "about": {
-    "title": "About in 10 seconds",
-    "points": [
-      "5+ years building backend systems",
-      "Microservices for auth, orders, billing",
-      "Leading and mentoring developers"
-    ]
-  },
+  
   "skills": {
-    "title": "Skills",
+    "title": "Skills ↓",
     "items": [
       {
         "title": "Backend Architecture",
@@ -45,24 +38,22 @@
     ]
   },
   "projects": {
-    "title": "Real Projects (click to expand)",
+    "title": "Projects ↓",
     "items": {
-      "asyncflow": "Async task orchestration with backpressure and retries.",
-      "easypeasysobes": "Interview prep tools with curated question sets.",
+      "asyncflow": "Event-driven microservices.",
+      "TextSummarizer": "An asynchronous microservice system for text summarization.",
       "sudoku": "Fast Sudoku solver and generator (algorithmic showcase).",
-      "awsdemo": "Reference deployment on AWS with CI/CD and observability."
+      "TeachMeMailer": "Reference deployment on AWS with CI/CD and observability."
     }
-  },
-  "lookingFor": {
-    "title": "What I’m looking for",
-    "line": "Senior Backend · Scalable Systems · Product Teams"
   },
   "contacts": {
     "title": "Contacts",
     "links": [
       { "label": "LinkedIn", "href": "https://www.linkedin.com/in/loguntsovae" },
-      { "label": "GitHub", "href": "https://github.com/loguntsovae" },
-      { "label": "Email", "href": "mailto:hello@loguntsovae.digital" }
+      { "label": "GitHub", "href": "https://github.com/loguntsovae?tab=repositories" },
+      { "label": "Telegram", "href": "https://t.me/loguntsovae" },
+      { "label": "Email", "href": "mailto:loguntsovae@gmail.com" },
+      { "label": "Book a call", "href": "https://calendar.app.google/vFFVqQNf9LK7qqJx9" }
     ]
   },
   "footer": {

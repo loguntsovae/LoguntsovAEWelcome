@@ -1,35 +1,33 @@
+import React from "react";
 import { useTranslation } from "react-i18next";
 import clsx from "classnames";
 
 export default function LanguageToggle() {
   const { i18n } = useTranslation();
-  const current = i18n.resolvedLanguage || i18n.language || "en";
-  const change = (lng: "en" | "ru") => () => i18n.changeLanguage(lng);
+  const current = (i18n.resolvedLanguage || i18n.language || "en").toLowerCase();
+  const change = (lng: "en" | "ru") => (e: React.MouseEvent) => {
+    e.preventDefault();
+    i18n.changeLanguage(lng);
+  };
   return (
-    <div className="inline-flex items-center rounded-md border border-neutral-200 p-1 text-sm">
-      <button
-        type="button"
-        onClick={change("en")}
-        className={clsx(
-          "px-2 py-1 rounded",
-          current === "en" ? "bg-neutral-900 text-white" : "text-neutral-700 hover:bg-neutral-100"
-        )}
-        aria-pressed={current === "en"}
-      >
-        EN
-      </button>
-      <span className="px-1 text-neutral-300">|</span>
-      <button
-        type="button"
-        onClick={change("ru")}
-        className={clsx(
-          "px-2 py-1 rounded",
-          current === "ru" ? "bg-neutral-900 text-white" : "text-neutral-700 hover:bg-neutral-100"
-        )}
-        aria-pressed={current === "ru"}
-      >
-        RU
-      </button>
+    <div className="mt-[24px] flex items-center justify-end pr-6">
+      <nav className="text-[14px] font-medium text-[#444] opacity-90">
+        <a
+          href="#"
+          onClick={change("en")}
+          className={clsx("cursor-pointer hover:opacity-80", current === "en" && "text-[#111]")}
+        >
+          EN
+        </a>
+        <span className="mx-2 text-[#888]">·</span>
+        <a
+          href="#"
+          onClick={change("ru")}
+          className={clsx("cursor-pointer hover:opacity-80", current === "ru" && "text-[#111]")}
+        >
+          RU
+        </a>
+      </nav>
     </div>
   );
 }
