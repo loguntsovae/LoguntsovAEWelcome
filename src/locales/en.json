@@ -13,7 +13,7 @@
   },
   
   "skills": {
-    "title": "Skills",
+    "title": "Skills ↓",
     "items": [
       {
         "title": "Backend Architecture",
@@ -38,12 +38,12 @@
     ]
   },
   "projects": {
-    "title": "Real Projects (click to expand)",
+    "title": "Projects ↓",
     "items": {
-      "asyncflow": "Async task orchestration with backpressure and retries.",
+      "asyncflow": "Event-driven microservices.",
       "easypeasysobes": "Interview prep tools with curated question sets.",
       "sudoku": "Fast Sudoku solver and generator (algorithmic showcase).",
-      "awsdemo": "Reference deployment on AWS with CI/CD and observability."
+      "TeachMeMailer": "Reference deployment on AWS with CI/CD and observability."
     }
   },
   "contacts": {
