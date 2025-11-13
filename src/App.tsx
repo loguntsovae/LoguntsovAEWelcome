@@ -4,7 +4,6 @@ import LanguageToggle from "./components/LanguageToggle";
 import Hero from "./sections/Hero";
 import Skills from "./sections/Skills";
 import Projects from "./sections/Projects";
-import LookingFor from "./sections/LookingFor";
 import Contacts from "./sections/Contacts";
 
 const containerVariants = {
@@ -29,7 +28,6 @@ export default function App() {
           <Hero />
           <Skills />
           <Projects />
-          <LookingFor />
           <Contacts />
         </motion.div>
       </main>
