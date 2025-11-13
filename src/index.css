@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles */
+:root {
+  color-scheme: light;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  @apply font-sans antialiased bg-white text-neutral-900;
+}
+
+.container-px {
+  @apply px-4 sm:px-6 lg:px-8;
+}
+
+.btn {
+  @apply inline-flex items-center gap-2 rounded-md px-4 py-2 text-sm font-medium transition-colors;
+}
+.btn-primary {
+  @apply bg-neutral-900 text-white hover:bg-neutral-800;
+}
+.btn-secondary {
+  @apply bg-white text-neutral-900 ring-1 ring-neutral-200 hover:bg-neutral-50;
+}
+
+.card {
+  @apply rounded-lg border border-neutral-200 bg-white shadow-sm;
+}
+.card-body {
+  @apply p-4 md:p-6;
+}

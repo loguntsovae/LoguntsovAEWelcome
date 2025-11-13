@@ -1,0 +1,81 @@
+name: Deploy to EC2
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    env:
+      NODE_VERSION: 18
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Pack dist
+        run: |
+          tar -czf release.tar.gz -C dist .
+
+      - name: Ensure remote directories
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_KEY }}
+          port: ${{ secrets.EC2_PORT }}
+          script: |
+            set -e
+            BASE_DIR="${{ secrets.DEPLOY_PATH }}"
+            mkdir -p "$BASE_DIR/uploads" "$BASE_DIR/releases"
+
+      - name: Upload artifact via SCP
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_KEY }}
+          port: ${{ secrets.EC2_PORT }}
+          source: "release.tar.gz"
+          target: "${{ secrets.DEPLOY_PATH }}/uploads"
+          overwrite: true
+
+      - name: Deploy on server
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_KEY }}
+          port: ${{ secrets.EC2_PORT }}
+          script: |
+            set -e
+            BASE_DIR="${{ secrets.DEPLOY_PATH }}"
+            TS="$(date '+%Y-%m-%d_%H-%M-%S')"
+            RELEASE_DIR="$BASE_DIR/releases/$TS"
+            mkdir -p "$RELEASE_DIR"
+            tar -xzf "$BASE_DIR/uploads/release.tar.gz" -C "$RELEASE_DIR"
+            ln -sfn "$RELEASE_DIR" "$BASE_DIR/current"
+            echo "$TS" > "$BASE_DIR/last_release"
+            rm -f "$BASE_DIR/uploads/release.tar.gz"
+            echo "Release deployed: $RELEASE_DIR"
+
+# Required GitHub secrets:
+#   EC2_HOST: your EC2 public hostname or IP
+#   EC2_USER: SSH user (e.g., ubuntu)
+#   EC2_KEY:  private key contents for SSH (paste the PEM)
+#   EC2_PORT: optional, default 22
+#   DEPLOY_PATH: base path on server, e.g., /var/www/loguntsovae

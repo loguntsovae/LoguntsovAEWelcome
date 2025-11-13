@@ -1,0 +1,71 @@
+{
+  "common": {
+    "resume": "Резюме",
+    "portfolio": "Портфолио",
+    "live": "Live"
+  },
+  "hero": {
+    "name": "Aleksei Loguntsov",
+    "title": "Senior Backend Engineer",
+    "subline": "Python · FastAPI · Архитектура · AWS",
+    "tagline": "Я строю продакшен-готовые бэкенд-системы, которые масштабируются.",
+    "timeLabel": "Time in IT"
+  },
+  "about": {
+    "title": "Обо мне за 10 секунд",
+    "points": [
+      "5+ лет разработки бэкенда",
+      "Микросервисы для auth, orders, billing",
+      "Руковожу и менторю разработчиков"
+    ]
+  },
+  "skills": {
+    "title": "Навыки",
+    "items": [
+      {
+        "title": "Архитектура бэкенда",
+        "points": ["DDD", "Событийные системы", "REST/GraphQL API", "Надёжность и наблюдаемость"]
+      },
+      {
+        "title": "Python-инжиниринг",
+        "points": ["Python 3.10+", "FastAPI", "AsyncIO", "Pydantic / typing"]
+      },
+      {
+        "title": "Базы данных и хранилища",
+        "points": ["PostgreSQL", "Redis", "S3-совместимые хранилища", "Миграции и перфоманс"]
+      },
+      {
+        "title": "DevOps и облака",
+        "points": ["AWS (ECS, Lambda, SQS, API GW)", "Docker и CI/CD", "Базовый IaC", "Мониторинг и алерты"]
+      },
+      {
+        "title": "Фронтенд и инструменты",
+        "points": ["Базовый React", "TypeScript", "Vite/Tailwind", "Тестирование и tooling"]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Реальные проекты (нажмите, чтобы раскрыть)",
+    "items": {
+      "asyncflow": "Оркестрация асинхронных задач с backpressure и ретраями.",
+      "easypeasysobes": "Инструменты для подготовки к собеседованиям.",
+      "sudoku": "Быстрый решатель/генератор судоку (алгоритмы).",
+      "awsdemo": "Референсный деплой в AWS с CI/CD и наблюдаемостью."
+    }
+  },
+  "lookingFor": {
+    "title": "Что я ищу",
+    "line": "Senior Backend · Масштабируемые системы · Продуктовые команды"
+  },
+  "contacts": {
+    "title": "Контакты",
+    "links": [
+      { "label": "LinkedIn", "href": "https://www.linkedin.com/in/loguntsovae" },
+      { "label": "GitHub", "href": "https://github.com/loguntsovae" },
+      { "label": "Email", "href": "mailto:hello@loguntsovae.digital" }
+    ]
+  },
+  "footer": {
+    "madeBy": "© {{name}}. Все права защищены."
+  }
+}
