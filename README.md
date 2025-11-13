@@ -8,7 +8,7 @@ A production-ready, single-page portfolio for Aleksei Loguntsov (Senior Backend 
 - TailwindCSS with clean, minimalist UI (Inter font)
 - Framer Motion fade/slide animations
 - i18n with EN (default) and RU toggle
-- Real-time IT experience counter (from Sep 2018)
+- Real-time IT experience counter
 - Sections: Hero, About, Skills (accordion), Projects (expandable), Looking For, Contacts
 - Ready for Netlify/Vercel deploy (SPA redirects included)
 

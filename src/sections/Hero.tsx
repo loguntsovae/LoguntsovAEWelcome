@@ -7,7 +7,7 @@ export default function Hero() {
   const { t } = useTranslation();
 
   return (
-    <section id="hero" className="pt-[80px] pb-[60px]">
+    <section id="hero" className="pt-[80px] pb-[10px]">
       <div className="mx-auto max-w-7xl px-4">
         <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-2">
           {/* Left column */}
@@ -36,7 +36,7 @@ export default function Hero() {
 
           {/* Right column */}
           <div className="flex items-center justify-start md:justify-end">
-            <ItTimer startDate="2018-09-01" />
+            <ItTimer startDate="2020-09-01" />
           </div>
         </div>
       </div>

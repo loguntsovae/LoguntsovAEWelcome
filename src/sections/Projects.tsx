@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import Button from "../components/Button";
 import { motion, AnimatePresence } from "framer-motion";
-import placeholder from "../assets/profile-placeholder.svg";
 
 type Project = {
   key: string;
@@ -10,7 +9,6 @@ type Project = {
   desc: string;
   live?: string;
   github?: string;
-  image?: string;
 };
 
 export default function Projects() {
@@ -23,39 +21,35 @@ export default function Projects() {
             title: "AsyncFlow", 
             desc: t("projects.items.asyncflow") as string, 
             live: "https://loguntsovae.digital/asyncflow", 
-            github: "https://github.com/loguntsovae/AsyncFlow", 
-            image: placeholder 
+            github: "https://github.com/loguntsovae/AsyncFlow" 
         },
         { 
             key: "TextSummarizer", 
             title: "TextSummarizer", 
             desc: t("projects.items.TextSummarizer") as string, 
             live: "https://loguntsovae.digital/textsummarizer", 
-            github: "https://github.com/loguntsovae/TextSummarizer", 
-            image: placeholder 
+            github: "https://github.com/loguntsovae/TextSummarizer" 
         },
         { 
             key: "sudoku", 
             title: "Sudoku Solver", 
             desc: t("projects.items.sudoku") as string, 
             live: "https://loguntsovae.digital/sudoku", 
-            github: "https://github.com/loguntsovae/sudoku", 
-            image: placeholder 
+            github: "https://github.com/loguntsovae/sudoku" 
         },
         { 
             key: "TeachMeMailer", 
             title: "TeachMeMailer", 
             desc: t("projects.items.TeachMeMailer") as string, 
             live: "https://loguntsovae.digital/mailer", 
-            github: "https://github.com/loguntsovae/TeachMeMailer", 
-            image: placeholder 
+            github: "https://github.com/loguntsovae/TeachMeMailer" 
         }
     ];
 
     const toggleOpen = () => setOpen((prev) => !prev);
 
     return (
-        <section id="projects" className="py-16">
+    <section id="projects" className="pt-8 pb-8">
             <div className="mx-auto max-w-7xl px-4">
                 <button
                     type="button"
@@ -96,30 +90,19 @@ function ProjectCard({ project }: { project: Project }) {
     return (
         <div className="card">
             <div className="card-body">
-                <div className="flex items-start gap-4">
-                    {project.image && (
-                        <img
-                            src={project.image}
-                            alt={project.title}
-                            className="h-16 w-16 rounded border border-neutral-200 object-cover"
-                        />
+                <h3 className="text-lg font-medium">{project.title}</h3>
+                <p className="mt-1 text-sm text-neutral-600">{project.desc}</p>
+                <div className="mt-4 flex gap-3">
+                    {project.live && (
+                        <Button href={project.live} target="_blank" rel="noopener" variant="secondary">
+                            {t("common.live")}
+                        </Button>
                     )}
-                    <div className="min-w-0">
-                        <h3 className="truncate text-lg font-medium">{project.title}</h3>
-                        <p className="mt-1 text-sm text-neutral-600">{project.desc}</p>
-                        <div className="mt-4 flex gap-3">
-                            {project.live && (
-                                <Button href={project.live} target="_blank" rel="noopener" variant="secondary">
-                                    {t("common.live")}
-                                </Button>
-                            )}
-                            {project.github && (
-                                <Button href={project.github} target="_blank" rel="noopener" variant="secondary">
-                                    GitHub
-                                </Button>
-                            )}
-                        </div>
-                    </div>
+                    {project.github && (
+                        <Button href={project.github} target="_blank" rel="noopener" variant="secondary">
+                            GitHub
+                        </Button>
+                    )}
                 </div>
             </div>
         </div>

@@ -41,7 +41,7 @@
     "title": "Projects ↓",
     "items": {
       "asyncflow": "Event-driven microservices.",
-      "easypeasysobes": "Interview prep tools with curated question sets.",
+      "TextSummarizer": "An asynchronous microservice system for text summarization.",
       "sudoku": "Fast Sudoku solver and generator (algorithmic showcase).",
       "TeachMeMailer": "Reference deployment on AWS with CI/CD and observability."
     }

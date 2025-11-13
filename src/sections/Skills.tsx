@@ -9,7 +9,7 @@ export default function Skills() {
   const [expanded, setExpanded] = useState(false);
   const items = t("skills.items", { returnObjects: true }) as { title: string; points: string[] }[];
   return (
-    <section id="skills" className="py-16">
+  <section id="skills" className="pt-16 pb-8">
       <div className="mx-auto max-w-7xl px-4">
         <button
           type="button"
